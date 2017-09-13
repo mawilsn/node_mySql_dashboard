@@ -1,0 +1,8 @@
+1. git add .
+Description :
+
+2. git commit -m "description of the commit"
+Description :
+
+3. git push
+Description : pushes to github
