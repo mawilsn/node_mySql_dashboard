@@ -1,7 +1,7 @@
 {
   "name": "node_mysql_dashboard",
   "version": "0.0.1",
-  "description": "JavaScript development environment Pluralsight course by Cory House",
+  "description": "Development testing for a dashboard",
   "scripts": {
     "prestart": "babel-node buildScripts/startMsgtest.js",
     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch start-mockapi",
@@ -16,19 +16,20 @@
     "generate-mock-data": "babel-node buildScripts/generateMockData",
     "prestart-mockapi": "npm run generate-mock-data",
     "start-mockapi": "json-server --watch src/api/db.json --port 3001",
-	"clean-dist": "rimraf ./dist && mkdir dist",
+    "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean-dist test lint",
     "build": "babel-node buildScripts/build.js",
-	"postbuild": "babel-node buildScripts/distServer.js",
+    "postbuild": "babel-node buildScripts/distServer.js",
     "deploy": "surge ./dist"
-
   },
-  "author": "Cory House",
+  "author": "Mark Wilson",
   "license": "MIT",
   "dependencies": {
+    "mysql": "^2.14.1",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
     "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
     "babel-loader": "6.2.5",
