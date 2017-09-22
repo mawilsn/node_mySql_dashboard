@@ -4,11 +4,12 @@ import getBaseUrl from './baseUrl';
 const baseUrl = getBaseUrl();
 
 export function getUsers() {
-  return get('users');
+  return get('projects');
 }
 
-export function deleteUser(id) {
-  return del(`users/${id}`);
+export function delete_project(id) {
+		console.log("Console thistpp")
+  return del(`projects/${id}`);
 }
 
 function get(url) {
@@ -17,9 +18,12 @@ function get(url) {
 
 // Can't call func delete since reserved word.
 function del(url) {
+
   const request = new Request(baseUrl + url, {
     method: 'DELETE'
-  });
+}, 	  	console.log("Console this " + baseUrl + url)
+
+);
 
   return fetch(request).then(onSuccess, onError);
 }

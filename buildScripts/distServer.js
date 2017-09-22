@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-app.get('/projectinfo',(req, res){
+app.get('/projectinfo',function(req, res){
 
 })
 app.get('/users', function(req, res) {

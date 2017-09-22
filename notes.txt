@@ -11,3 +11,9 @@ http://localhost:3000/?useMockApi=true //gives access to mock api
 
 //kill a run away process
 So I ran netstat -o | grep :5858 (Although netstat -a -n -o | findstr :5858 seems to work aswell) in zsh which told me that Process ID (PID) 5728 was listening to port 5858. I then killed that process using taskkill /pid 5728 (Sometimes you have to use the /F at the end of this command in order to force kill it).
+
+
+index.test.js is what runs test cases
+
+
+the id should probably left as id for convention.
